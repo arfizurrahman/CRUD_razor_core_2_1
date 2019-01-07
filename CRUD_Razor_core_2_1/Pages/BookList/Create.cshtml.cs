@@ -17,9 +17,23 @@ namespace CRUD_Razor_core_2_1.Pages.BookList
             _db = db;
         }
 
-
+        [BindProperty] //Doing this we do not have to pass the book object as parameter
+        public Book Book { get; set; }
         public void OnGet()
         {
+
+        }
+
+        public async Task<IActionResult> OnPost()
+        {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+
+            _db.Books.Add(book);
+            await _db.SaveChangesAsync();
+            return RedirectToPage("Index");
 
         }
     }
