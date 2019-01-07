@@ -31,7 +31,7 @@ namespace CRUD_Razor_core_2_1.Pages.BookList
                 return Page();
             }
 
-            _db.Books.Add(book);
+            _db.Books.Add(Book);
             await _db.SaveChangesAsync();
             return RedirectToPage("Index");
 
