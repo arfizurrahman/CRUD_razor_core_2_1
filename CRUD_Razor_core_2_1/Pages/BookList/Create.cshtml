@@ -9,6 +9,24 @@
 <br/>
 
 
-<div style="border: 1px solid #bbb9b9; border-radius: 30px">
-
+<div style="border: 1px solid #bbb9b9; border-radius: 5px; ">
+    <form method="post">
+        <div class="row" style="padding-left: 30px; padding-top: 30px; ">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-sm-1">
+                        <label asp-for="Book.Name"></label>
+                    </div>
+                    <div class="col-sm-4">
+                        <input asp-for="Book.Name" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary btn-sm"/>
+                <a asp-page="Index" class="btn btn-success btn-sm">Back to List</a>
+            </div>
+        </div>
+    </form>
 </div>
